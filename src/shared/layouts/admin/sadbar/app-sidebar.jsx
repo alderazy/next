@@ -18,7 +18,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
       {/* 1. الهيدر: اللوجو أو اسم النظام */}
-      <SidebarHeader className="p-4 font-bold border-b">
+      <SidebarHeader className="px-4 py-[22px] font-bold border-b">
         لوحة التحكم
       </SidebarHeader>
 

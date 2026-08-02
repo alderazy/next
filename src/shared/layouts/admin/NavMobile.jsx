@@ -17,20 +17,22 @@ export default function NavMobile() {
   const lang = pathName.startsWith("/ar");
 
   return (
-    <Card className="sticky bottom-0 rounded-none py-1 start-0 ">
+    <Card className="sticky bottom-0 md:hidden rounded-none py-1 start-0 ">
       <div className="flex justify-around items-center">
         <Link href="/admin">
           <button className="flex justify-center items-center flex-col">
-            <LayoutDashboard size={25} />
-            <span className="text-sm">
+            <LayoutDashboard size={20} />
+            <span className="text-[.6rem] mt-1">
               {lang ? "لوحة التحكم" : "dashboard"}
             </span>
           </button>
         </Link>
         <Link href="/admin/projects">
           <button className="flex justify-center items-center flex-col">
-            <FolderGit2 size={25} />
-            <span className="text-sm">{lang ? "مشاريع" : "projects"}</span>
+            <FolderGit2 size={20} />
+            <span className="text-[.6rem] mt-1">
+              {lang ? "مشاريع" : "projects"}
+            </span>
           </button>
         </Link>
         <div className="grid place-content-center ">
@@ -40,14 +42,18 @@ export default function NavMobile() {
         </div>
         <Link href="/admin/settings">
           <button className="flex justify-center items-center flex-col">
-            <Settings size={25} />
-            <span className="text-sm">{lang ? "الإعدادات" : "settings"}</span>
+            <Settings size={20} />
+            <span className="text-[.6rem] mt-1">
+              {lang ? "الإعدادات" : "settings"}
+            </span>
           </button>
         </Link>
         <Link href="/admin/contact">
           <button className="flex justify-center items-center flex-col">
-            <Mail size={25} />
-            <span className="text-sm">{lang ? "مراسله" : "message"}</span>
+            <Mail size={20} />
+            <span className="text-[.6rem] mt-1">
+              {lang ? "مراسله" : "message"}
+            </span>
           </button>
         </Link>
       </div>

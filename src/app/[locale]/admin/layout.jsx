@@ -1,12 +1,7 @@
-import ToggelLang from "@/features/global/ToggleLang";
-import { ModeToggle } from "@/providers/theme-toogle";
 import { Suspense } from "react";
-import {
-  SidebarProvider,
-  SidebarTrigger,
-  SidebarInset,
-} from "@/shared/components/ui/sidebar";
+import { SidebarProvider, SidebarInset } from "@/shared/components/ui/sidebar";
 import { AppSidebar } from "@/shared/layouts/admin/sadbar/app-sidebar";
+import Nav_Bar from "@/shared/layouts/admin/navTop/Nav_bar";
 import { TooltipProvider } from "@/shared/components/ui/tooltip"; // أو مسار المكون لديك
 import LoginToastListener from "@/shared/layouts/admin/sadbar/LoginToastListener";
 import NavMobile from "@/shared/layouts/admin/NavMobile";
@@ -22,12 +17,8 @@ export default function LayoutAdmin({ children }) {
       >
         <AppSidebar />
         <SidebarInset className="flex min-h-screen flex-col h-400  gap-4">
-          <header className="sticky top-0 z-10 flex h-20 items-center justify-between bg-card px-4">
-            <SidebarTrigger />
-            <div className="flex items-center gap-2">
-              <ModeToggle />
-              <ToggelLang />
-            </div>
+          <header className="sticky top-0 z-10 h-17 bg-[var(--card)]">
+            <Nav_Bar></Nav_Bar>
           </header>
           <Suspense fallback={null}>
             <LoginToastListener />

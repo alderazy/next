@@ -8,7 +8,7 @@ import {
 import { AppSidebar } from "@/shared/layouts/admin/sadbar/app-sidebar";
 import { TooltipProvider } from "@/shared/components/ui/tooltip"; // أو مسار المكون لديك
 
-export default function LayoutAdmin({ children }) {
+export default function LayoutHome({ children }) {
   return (
     <TooltipProvider>
       <SidebarProvider

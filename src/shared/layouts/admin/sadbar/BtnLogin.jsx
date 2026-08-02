@@ -8,7 +8,7 @@ import {
   SidebarMenuButton,
 } from "@/shared/components/ui/sidebar";
 
-export default async function AuthButton() {
+export default async function AuthButton({ children }) {
   const isAuthenticated = await verifySession();
 
   return (
@@ -23,7 +23,7 @@ export default async function AuthButton() {
               className="text-destructive hover:bg-destructive/10 hover:text-destructive font-medium transition-colors"
             >
               <LogOut className="h-4 w-4 shrink-0" />
-              <span>تسجيل الخروج</span>
+              <span>logOut</span>
             </SidebarMenuButton>
           </form>
         ) : (
