@@ -9,6 +9,7 @@ import {
 import { AppSidebar } from "@/shared/layouts/admin/sadbar/app-sidebar";
 import { TooltipProvider } from "@/shared/components/ui/tooltip"; // أو مسار المكون لديك
 import LoginToastListener from "@/shared/layouts/admin/sadbar/LoginToastListener";
+import NavMobile from "@/shared/layouts/admin/NavMobile";
 
 export default function LayoutAdmin({ children }) {
   return (
@@ -20,7 +21,7 @@ export default function LayoutAdmin({ children }) {
         }}
       >
         <AppSidebar />
-        <SidebarInset className="flex min-h-screen flex-col gap-4">
+        <SidebarInset className="flex min-h-screen flex-col h-400  gap-4">
           <header className="sticky top-0 z-10 flex h-20 items-center justify-between bg-card px-4">
             <SidebarTrigger />
             <div className="flex items-center gap-2">
@@ -36,6 +37,8 @@ export default function LayoutAdmin({ children }) {
           <footer className="flex bg-card h-20 items-center justify-center ">
             footer
           </footer>
+
+          <NavMobile />
         </SidebarInset>
       </SidebarProvider>
     </TooltipProvider>

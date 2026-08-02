@@ -1,27 +1,3 @@
-// import { Button } from "@/shared/components/ui/button";
-// import { verifySession } from "@/lib/services/session";
-// import Link from "next/link";
-// import { LogoutAction } from "@/lib/services/logOut";
-
-// export default async function AuthButton() {
-//   const isAuthenticated = await verifySession();
-
-//   if (isAuthenticated) {
-//     return (
-//       <form action={LogoutAction}>
-//         <Button variant="destructive" size="sm" type="submit">
-//           تسجيل الخروج
-//         </Button>
-//       </form>
-//     );
-//   }
-
-//   return (
-//     <Button asChild variant="default" size="sm">
-//       <Link href="/ar/login">تسجيل الدخول</Link>
-//     </Button>
-//   );
-// }
 import Link from "next/link";
 import { LogIn, LogOut } from "lucide-react";
 import { verifySession } from "@/lib/services/session";
