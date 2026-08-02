@@ -1,0 +1,14 @@
+{
+  "Metadata": {
+    "title": "Alderazy",
+    "description": "front end "
+  },
+  "Sidebar": {
+    "dashboard": "Dashboard",
+    "contact": "contact",
+    "about": "about",
+    "cv": "cv",
+    "projects": "projects",
+    "portfolio": "portfolio"
+  }
+}

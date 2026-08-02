@@ -1,0 +1,14 @@
+{
+  "Metadata": {
+    "title": "الدرازي",
+    "description": "front end "
+  },
+  "Sidebar": {
+    "dashboard": "الرئيسية",
+    "contact": "تواصل معنا",
+    "about": "من نحن ",
+    "cv": "cv",
+    "projects": "مشاريع",
+    "portfolio": "الملف الشخصي"
+  }
+}
