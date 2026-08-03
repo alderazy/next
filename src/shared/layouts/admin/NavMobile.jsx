@@ -21,16 +21,16 @@ export default function NavMobile() {
       <div className="flex justify-around items-center">
         <Link href="/admin">
           <button className="flex justify-center items-center flex-col">
-            <LayoutDashboard size={20} />
-            <span className="text-[.6rem] mt-1">
+            <LayoutDashboard size={21} />
+            <span className="text-[.8rem] mt-1">
               {lang ? "لوحة التحكم" : "dashboard"}
             </span>
           </button>
         </Link>
         <Link href="/admin/projects">
           <button className="flex justify-center items-center flex-col">
-            <FolderGit2 size={20} />
-            <span className="text-[.6rem] mt-1">
+            <FolderGit2 size={21} />
+            <span className="text-[.8rem] mt-1">
               {lang ? "مشاريع" : "projects"}
             </span>
           </button>
@@ -42,16 +42,16 @@ export default function NavMobile() {
         </div>
         <Link href="/admin/settings">
           <button className="flex justify-center items-center flex-col">
-            <Settings size={20} />
-            <span className="text-[.6rem] mt-1">
+            <Settings size={21} />
+            <span className="text-[.8rem] mt-1">
               {lang ? "الإعدادات" : "settings"}
             </span>
           </button>
         </Link>
         <Link href="/admin/contact">
           <button className="flex justify-center items-center flex-col">
-            <Mail size={20} />
-            <span className="text-[.6rem] mt-1">
+            <Mail size={21} />
+            <span className="text-[.8rem] mt-1">
               {lang ? "مراسله" : "message"}
             </span>
           </button>

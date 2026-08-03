@@ -16,14 +16,14 @@ export default function LayoutAdmin({ children }) {
         }}
       >
         <AppSidebar />
-        <SidebarInset className="flex min-h-screen flex-col h-400  gap-4">
-          <header className="sticky top-0 z-10 h-17 bg-[var(--card)]">
+        <SidebarInset className="flex min-h-screen flex-col ">
+          <header className="sticky top-0 z-10 h-18 bg-[var(--card)]">
             <Nav_Bar></Nav_Bar>
           </header>
           <Suspense fallback={null}>
             <LoginToastListener />
           </Suspense>
-          <main className="flex-1 bg-card  p-4">{children}</main>
+          <main className="p-4 min-h-screen ">{children}</main>
 
           <footer className="flex bg-card h-20 items-center justify-center ">
             footer

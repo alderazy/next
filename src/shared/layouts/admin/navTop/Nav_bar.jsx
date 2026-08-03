@@ -39,7 +39,7 @@ export default function NavBar() {
         <ToggelLang />
       </div>
       <div className="flex">
-        <div className="me-3">
+        <div className="me-2">
           <DropdownMenu className="">
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full">
