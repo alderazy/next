@@ -51,7 +51,7 @@ export function ItemImage() {
       {/* firsr */}
       <ItemGroup className="w-full gap-0 justify-between h-full">
         {music.map((song) => (
-          <div key={song.title}>
+          <div key={song.title} className="h-full">
             <Item
               className=" justify-between flex-nowrap w-full  border-none"
               variant="outline"

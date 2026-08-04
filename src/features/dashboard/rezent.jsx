@@ -7,7 +7,7 @@ export default function RecentSection() {
       <div className="h-10">
         <HeaderRecentSection />
       </div>
-      <div className="flex-1">
+      <div className="h-full">
         <ItemImage></ItemImage>
       </div>
     </div>
