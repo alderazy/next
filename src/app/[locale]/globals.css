@@ -46,6 +46,7 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --text-fluid-sm: clamp(0.5rem, 1.5vw + 0.2rem, 1rem);
 }
 
 :root {
@@ -131,4 +132,55 @@
 [data-collapsible="icon"] [data-sidebar="menu-item"] {
   display: grid !important;
   place-content: center !important;
+}
+@layer utilities {
+  .text-h1 {
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  .text-h2 {
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  .text-h3 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem;
+    font-weight: 600;
+  }
+
+  .text-h4 {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.75rem;
+    font-weight: 600;
+  }
+
+  .text-body-lg {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem;
+    font-weight: 400;
+  }
+
+  .text-body {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+
+  .text-body-sm {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+
+  .text-caption {
+    font-size: 0.75rem; /* 12px */
+    line-height: 1rem;
+    font-weight: 400;
+  }
 }
