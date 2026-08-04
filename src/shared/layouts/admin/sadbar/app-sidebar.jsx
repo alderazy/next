@@ -10,15 +10,16 @@ import {
   SidebarMenuButton,
   SidebarFooter,
 } from "@/shared/components/ui/sidebar";
+
 import BtnLoin from "@/shared/layouts/admin/sadbar/BtnLogin";
 import Side_barGroupContent from "@/shared/layouts/admin/sadbar/SidebarGroupContent";
 import { Settings } from "lucide-react";
 
 export function AppSidebar() {
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" className="bg-sidebar">
       {/* 1. الهيدر: اللوجو أو اسم النظام */}
-      <SidebarHeader className="px-4 py-[22px] font-bold border-b">
+      <SidebarHeader className="px-4 py-[22px] bg-red font-bold border-b">
         لوحة التحكم
       </SidebarHeader>
 
