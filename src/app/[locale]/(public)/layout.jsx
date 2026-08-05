@@ -5,7 +5,7 @@ import {
   SidebarTrigger,
   SidebarInset,
 } from "@/shared/components/ui/sidebar";
-import { AppSidebar } from "@/shared/layouts/admin/sadbar/app-sidebar";
+import { AppSidebar } from "@/shared/layouts/public/sadbar/app-sidebar";
 import { TooltipProvider } from "@/shared/components/ui/tooltip"; // أو مسار المكون لديك
 
 export default function LayoutHome({ children }) {

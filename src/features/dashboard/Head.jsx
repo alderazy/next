@@ -1,9 +1,9 @@
 "use client";
 import { Card } from "@/shared/components/ui/card";
 import { usePathname } from "next/navigation";
-import { BadgeCheck, BookmarkIcon } from "lucide-react";
 import { Badge } from "@/shared/components/ui/badge";
 import Image from "next/image";
+import { useCustmContextUser } from "@/providers/userAdmin";
 import {
   SiReact,
   SiTailwindcss,
@@ -12,6 +12,7 @@ import {
 } from "react-icons/si";
 
 export default function HeadWelcome() {
+  const { userName } = useCustmContextUser();
   const path = usePathname();
   const lang = path.startsWith("/ar");
   //   -to-br from-[#0d1527] via-[#080c17] to-[#03050c]
@@ -42,11 +43,12 @@ export default function HeadWelcome() {
             <div>
               {lang ? (
                 <p className="text-blue-400">
-                  مرحبا ,<span className=" text-foreground">صادق</span>
+                  مرحبا ,
+                  <span className=" text-foreground">{userName.value}</span>
                 </p>
               ) : (
                 <p>
-                  welcome <span>sadek</span>
+                  welcome <span>{userName.value}</span>
                 </p>
               )}
             </div>

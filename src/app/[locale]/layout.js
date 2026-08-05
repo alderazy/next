@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { UserAdmin } from "@/providers/userAdmin";
 import { routing } from "@/lib/i18n/routing";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "sonner";

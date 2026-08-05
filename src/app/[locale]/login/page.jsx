@@ -12,7 +12,7 @@ import {
   FieldSet,
 } from "@/shared/components/ui/field";
 import { Input } from "@/shared/components/ui/input";
-import { Button } from "@/shared/components/ui/button"; // لو المكون موجود عندك
+import { Button } from "@/shared/components/ui/button";
 
 export default function LogIn() {
   const [state, formAction, isPending] = useActionState(logInAction, null);
@@ -45,6 +45,7 @@ export default function LogIn() {
                 name="username"
                 type="text"
                 placeholder="اسم المستخدم"
+                autoComplete="username"
                 required
               />
               <FieldDescription>
@@ -59,6 +60,7 @@ export default function LogIn() {
                 name="password"
                 type="password"
                 placeholder="••••••••"
+                autoComplete="current-password"
                 required
               />
               <FieldDescription>
