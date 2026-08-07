@@ -4,6 +4,7 @@
     "description": "front end "
   },
   "Sidebar": {
+    "home": "home",
     "dashboard": "Dashboard",
     "contact": "contact",
     "about": "about",

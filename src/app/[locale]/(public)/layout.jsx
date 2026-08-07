@@ -1,39 +1,36 @@
-import ToggelLang from "@/features/global/ToggleLang";
-import { ModeToggle } from "@/providers/theme-toogle";
-import {
-  SidebarProvider,
-  SidebarTrigger,
-  SidebarInset,
-} from "@/shared/components/ui/sidebar";
+import { SidebarProvider, SidebarInset } from "@/shared/components/ui/sidebar";
 import { AppSidebar } from "@/shared/layouts/public/sadbar/app-sidebar";
+import Nav_Bar from "@/shared/layouts/public/navTop/Nav_bar";
 import { TooltipProvider } from "@/shared/components/ui/tooltip"; // أو مسار المكون لديك
+import NavMobile from "@/shared/layouts/public/NavMobile";
+import { verifySession } from "@/lib/services/session";
 
-export default function LayoutHome({ children }) {
+export default async function LayoutAdmin({ children }) {
+  const isverifySession = await verifySession();
+
   return (
-    <TooltipProvider>
-      <SidebarProvider
-        style={{
-          "--sidebar-width": "18rem",
-          "--sidebar-width-icon": "4rem",
-        }}
-      >
-        <AppSidebar />
-        <SidebarInset className="flex min-h-screen flex-col gap-4">
-          <header className="sticky top-0 z-10 flex h-20 items-center justify-between bg-amber-200 px-4">
-            <SidebarTrigger />
-            <div className="flex items-center gap-2">
-              <ModeToggle />
-              <ToggelLang />
-            </div>
-          </header>
+      <TooltipProvider>
+        <SidebarProvider
+          style={{
+            "--sidebar-width": "18rem",
+            "--sidebar-width-icon": "4rem",
+          }}
+        >
+          <AppSidebar />
+          <SidebarInset className="flex min-h-screen flex-col ">
+            <header className="sticky top-0 z-10 h-18 bg-[var(--card)]">
+              <Nav_Bar></Nav_Bar>
+            </header>
+           
+            <main className="p-4 min-h-screen ">{children}</main>
 
-          <main className="flex-1 bg-amber-200 p-4">{children}</main>
+            <footer className="flex bg-card h-20 items-center justify-center ">
+              footer
+            </footer>
 
-          <footer className="flex h-20 items-center justify-center bg-amber-200">
-            footer
-          </footer>
-        </SidebarInset>
-      </SidebarProvider>
-    </TooltipProvider>
+            <NavMobile />
+          </SidebarInset>
+        </SidebarProvider>
+      </TooltipProvider>
   );
 }

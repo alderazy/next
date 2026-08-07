@@ -4,6 +4,7 @@
     "description": "front end "
   },
   "Sidebar": {
+    "home": "الرئيسية",
     "dashboard": "الرئيسية",
     "contact": "تواصل معنا",
     "about": "من نحن ",
